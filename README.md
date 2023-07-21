@@ -1,12 +1,6 @@
-# cuda-proj-tmpl
+# cuda-debayer-cmake
 
-A minimal cmake based project skeleton for developping a CUDA application
-
-## Download this skeleton
-
-```bash
-git clone --recursive git@github.com:pkestene/cuda-proj-tmpl.git
-```
+Revive the [cuda-debayer project](https://github.com/avionic-design/cuda-debayer) using CMake.
 
 ## Modern CMake and CUDA
 
@@ -29,7 +23,7 @@ cd build
 cmake ..
 make
 # then you can run the application
-./src/saxpy_cuda
+./debayer
 ```
 
 If you use cmake version >= 3.18, here is a slightly updated version using CMAKE_CUDA_ARCHITECTURE
@@ -44,7 +38,7 @@ cd build
 cmake -DCMAKE_CUDA_ARCHITECTURES="75" ..
 make
 # then you can run the application
-./src/saxpy_cuda
+./debayer
 ```
 # How to build with nvc++ (from nvhpc) ?
 
@@ -57,5 +51,5 @@ cd build
 cmake -DCMAKE_CUDA_HOST_COMPILER=nvc++ -DCMAKE_CUDA_ARCHITECTURES="75" ..
 make
 # then you can run the application
-./src/saxpy_cuda
+./debayer
 ```

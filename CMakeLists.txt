@@ -76,10 +76,20 @@ find_package(OpenMP)
 include(protect_nvcc_flags)
 include(protect_pthread_flag)
 
+
+##########################################################
+# Find third-party dependencies for this project.
+find_package(OpenMP QUIET COMPONENTS CXX)
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
+
+
 ##########################################################
 ##########################################################
 ##########################################################
 ##########################################################
+
+add_executable(debayer "")
 
 # build some executable
 add_subdirectory(src)
